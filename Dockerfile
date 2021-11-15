@@ -15,7 +15,7 @@ RUN apt-get install -y libgl1-mesa-glx
 RUN conda env create -f environment.yml
 
 # Make RUN commands use the new environment:
-SHELL ["conda", "run", "-n", "path_view", "/bin/bash", "-c"]
+SHELL ["conda", "run", "-n", "flask_labeller_env", "/bin/bash", "-c"]
 
 # Activate Conda environment and check if it is working properly
 RUN echo "Making sure flask is installed correctly..."
@@ -24,8 +24,8 @@ RUN python -c "import flask"
 EXPOSE 5000
 
 # Python program to run in the container
-ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "path_view", \
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "flask_labeller_env", \
             "python", "-m", "image_labelling_tool.flask_labeller", \
             "--enable_dextr" \
-            #"--dextr_weights=dextr_model/dextr_OD.pth" \
+            #"--dextr_weights=path-to-custom-dextr-weights" \
             ]
