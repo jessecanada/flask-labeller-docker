@@ -29,9 +29,10 @@
       --gpus all \
       flasklabeller
     ```
-***note*** At this point the default U-net with ResNet101 convolutional blocks trained on the Pascal-VOC-2012 dataset provided by the dextr library will be downloaded.***
-6. navigate to 'localhost:5000' in your browser, your docker app should be up and running
-7. to stop the container, 'docker rm -f flasklabeller'
+> **At this point the default U-net with ResNet101 convolutional blocks trained on the Pascal-VOC-2012 dataset provided by the dextr library will be downloaded.**
+
+6. navigate to <i>localhost:5000</i> in your browser, your docker app should be up and running
+7. to stop the container, `docker rm -f flasklabeller`
 
 ### Option 2
 1. `docker build https://github.com/jessecanada/flask-labeller-docker.git`
