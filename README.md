@@ -15,7 +15,7 @@
 ### Requirements
 - docker and git should be properly configured
 - the docker image is 11.4GB
-- assumes you have at least one nvidia GPU that supports CUDA 11.1; if not, skip '--gpus all' and CPU will be used for inference
+- assumes you have at least one nvidia GPU that supports CUDA 11.1; if not, skip `--gpus all` and CPU will be used for inference
 
 ### Option 1
 1. `git clone` this project
@@ -29,7 +29,7 @@
       --gpus all \
       flasklabeller
     ```
-***note*** at this point the default U-net with ResNet101 convolutional blocks trained on the Pascal-VOC-2012 dataset provided by the dextr library will be downloaded
+***note*** At this point the default U-net with ResNet101 convolutional blocks trained on the Pascal-VOC-2012 dataset provided by the dextr library will be downloaded.***
 6. navigate to 'localhost:5000' in your browser, your docker app should be up and running
 7. to stop the container, 'docker rm -f flasklabeller'
 
