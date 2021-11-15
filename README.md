@@ -36,4 +36,4 @@
 
 ### Option 2
 1. `docker build https://github.com/jessecanada/flask-labeller-docker.git`
-- now follow steps 4 through 6 as above
+2. now follow steps 4 through 6 from above
