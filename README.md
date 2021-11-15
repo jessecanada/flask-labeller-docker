@@ -22,7 +22,8 @@
 2. `cd` into the flask-labeller directory
 3. `docker build -t flasklabeller .`
 4. `cd` into "images"
-5. ```shell script
+5. copy images you want to label into "images"
+6. ```shell script
     $ docker run -dp 5000:5000 \
       --name flasklabeller \
       -v "$(pwd)":/flask_labeller/images \
@@ -31,8 +32,8 @@
     ```
 > **At this point the default U-net with ResNet101 convolutional blocks trained on the Pascal-VOC-2012 dataset provided by the dextr library will be downloaded.**
 
-6. navigate to <i>localhost:5000</i> in your browser, your docker app should be up and running
-7. to stop the container, run `docker rm -f flasklabeller`
+7. navigate to <i>localhost:5000</i> in your browser, your docker app should be up and running
+8. to stop the container, run `docker rm -f flasklabeller`
 
 ### Option 2
 1. ```shell script
